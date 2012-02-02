@@ -36,8 +36,5 @@ showHelp = do
 
 -- main = fmap head getArgs >>= getContentsRecursive >>= mapM_ putStrLn
 main = do
-    (srcPath:dstPath:_) <- catch getArgs argsError 
+    (srcPath:dstPath:_) <- getArgs
     getContentsRecursive srcPath >>= mapM_ putStrLn
-    where
-    argsError :: (Exception e) => e -> IO [String]
-    argsError e = showHelp >> exitFailure >> return []
