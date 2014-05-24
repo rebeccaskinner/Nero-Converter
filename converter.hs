@@ -10,7 +10,7 @@ import System.IO.Error hiding (catch)
 import Control.Exception
 
 ultraIsoPath = "C:\\Program Files (x86)\\UltraISO\\UltraISO.exe"
-lamePath = "C:\\Users\\tim\\bin\\lame\\lame.exe" 
+lamePath = "C:\\Users\\rebecca\\bin\\lame\\lame.exe" 
 
 dirChildren d = do
     cont <- catch (getDirectoryContents d) permissionHandler
